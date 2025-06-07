@@ -4,7 +4,6 @@ import React from 'react'
 import { motion } from 'motion/react'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 import { FaClock, FaEnvelope, FaPhone } from 'react-icons/fa6'
-import { Button } from './ui/button'
 import Link from 'next/link'
 import { MdMenuBook } from 'react-icons/md'
 
@@ -19,6 +18,17 @@ const HeroSection = () => {
         animate: { opacity: 1, y: 0 },
         exit: { opacity: 0, y: -20 }
     }
+    const itemVariants = {
+        hidden: { opacity: 0, y: 10 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.3,
+                ease: "easeOut"
+            }
+        }
+    };
     return (
         <main className="flex-1">
             <section className="text-white font-bitter">
@@ -63,15 +73,54 @@ const HeroSection = () => {
                         {/* Centered Hero Text */}
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="text-center px-6 w-full max-w-4xl text-yellow-500">
+                                <motion.div
+                                    variants={itemVariants}
+                                    className="inline-flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-full text-[11px] sm:text-sm font-medium font-dmsans mx-auto text-yellow-200 mb-4 sm:mb-6 sm:border-2 border-dashed border-yellow-500/30 hover:border-yellow-500/50 transition-colors duration-300"
+                                    whileHover={{
+                                        scale: 1.03,
+                                        transition: { duration: 0.2 }
+                                    }}
+                                >
+                                    <span className="bg-yellow-600 text-white px-3 py-1.5 sm:px-3 sm:py-1 rounded-md text-[10px] sm:text-xs font-bold whitespace-nowrap w-fit mx-auto sm:mx-0 sticky">
+                                        Until 12/25
+                                    </span>
+                                    <span className="text-center sm:text-left text-sm mt-1 sm:mt-0 px-2">
+                                        Get 50% off your first order!
+                                    </span>
+                                </motion.div>
                                 <motion.h1 className="text-8xl font-bold mb-6 leading-tight" variants={wordAnimation} initial="initial" animate="animate" exit="exit" transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}>
                                     Where Every Bite Whispers a Tale
                                 </motion.h1>
-                                <Button asChild size="lg" className="text-lg font-bold font-bitter px-4 py-6 bg-yellow-500 text-black hover:bg-yellow-600">
-                                    <Link href="/menu">
-                                        <MdMenuBook className="h-5 w-5 mr-2 text-black" />
-                                        Urahara&apos;s Menu
+                                <motion.div
+                                    className="w-full sm:w-auto"
+                                    whileHover={{
+                                        scale: 1.02,
+                                        transition: {
+                                            duration: 0.2,
+                                            ease: "easeOut"
+                                        }
+                                    }}
+                                >
+                                    <Link
+                                        href=""
+                                        target="_blank"
+                                        className="py-3 px-6 inline-flex items-center justify-center w-full sm:w-auto gap-2 bg-yellow-500 text-black font-bitter font-bold text-sm rounded-xl"
+                                    >
+                                        <motion.div
+                                            className="flex items-center gap-2"
+                                            whileHover={{
+                                                y: -1.8,
+                                                transition: {
+                                                    duration: 0.2,
+                                                    ease: "easeOut"
+                                                }
+                                            }}
+                                        >
+                                            <MdMenuBook className="text-lg text-black" />
+                                            Urahara&apos;s Menu
+                                        </motion.div>
                                     </Link>
-                                </Button>
+                                </motion.div>
                             </div>
                         </div>
                     </motion.div>
