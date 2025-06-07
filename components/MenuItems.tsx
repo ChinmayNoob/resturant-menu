@@ -41,7 +41,7 @@ export function MenuItems({ isDrawerOpen, setOpenDrawer }: MenuItemsProps) {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []); 
+    }, []);
 
     const handleMenuClick = (key: string, href: string) => {
         if (isDrawerOpen && setOpenDrawer) {
@@ -52,7 +52,7 @@ export function MenuItems({ isDrawerOpen, setOpenDrawer }: MenuItemsProps) {
         // Smooth scroll to section with wave effect
         const targetElement = document.querySelector(href);
         if (targetElement) {
-            const headerOffset = 100; 
+            const headerOffset = 100;
             const elementPosition = targetElement.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -143,13 +143,14 @@ export function MenuItems({ isDrawerOpen, setOpenDrawer }: MenuItemsProps) {
                 initial="hidden"
                 animate="visible"
             >
-                {menuOptions.map((option, index) => {
+                {menuOptions.map((option) => {
                     const IconComponent = option.icon;
                     const isActive = currentSection === option.key;
 
                     return (
                         <motion.div
                             key={option.key}
+
                             variants={itemVariants}
                             whileHover="hover"
                             whileTap="tap"

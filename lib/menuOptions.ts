@@ -1,4 +1,3 @@
-import { FaCarrot } from "react-icons/fa6";
 import { GiChickenOven } from "react-icons/gi";
 import { IoBeerOutline } from "react-icons/io5";
 import { LuIceCreamBowl, LuSalad } from "react-icons/lu";
