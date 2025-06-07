@@ -102,9 +102,8 @@ const HeroSection = () => {
                                     }}
                                 >
                                     <Link
-                                        href=""
-                                        target="_blank"
-                                        className="py-2.5 sm:py-3 px-4 sm:px-6 inline-flex items-center justify-center gap-2 bg-yellow-500 text-black font-bitter font-bold text-xs sm:text-sm rounded-xl max-w-xs sm:max-w-none mx-auto"
+                                        href="/menu"
+                                        className="py-2.5 sm:py-3 px-4 sm:px-6 inline-flex items-center justify-center gap-2 bg-yellow-500 text-black font-bitter font-bold text-xs sm:text-sm rounded-xl max-w-xs sm:max-w-none mx-auto transition-all duration-300 hover:bg-yellow-400 hover:shadow-lg"
                                     >
                                         <motion.div
                                             className="flex items-center gap-2"

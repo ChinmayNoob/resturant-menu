@@ -19,10 +19,10 @@ export const menuOptions = [
         href: "#salads",
     },
     {
-        key: "main dishes",
+        key: "maindishes",
         icon: GiChickenOven,
         label: "Main dishes",
-        href: "#main dishes",
+        href: "#maindishes",
     },
     {
         key: "beverages",

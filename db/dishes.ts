@@ -56,16 +56,17 @@ export const dishes: TRestaurant = {
         },
         {
           id: "3",
-          name: "Buffalo Chicken Wings",
+          name: "Chicken Wings",
           ingredients:
-            "Chicken wings, oil, buffalo sauce, butter, slat, flour, blue cheese, carrot sticks, celery sticks ",
+            "Chicken wings, oil, butter, salt, flour, blue cheese, carrot sticks, celery sticks",
           description:
-            "Buffalo chicken wings are a quintessential American appetizer known for their bold, spicy flavor. They typically consist of crispy fried chicken wings coated in a zesty and tangy Buffalo sauce. The dish's heat level can be adjusted to suit individual preferences, making it a beloved choice for gatherings, sports events, or casual dining, offering a spicy and indulgent finger food experience.",
+            "Chicken wings are a classic appetizer enjoyed for their crispy texture and savory flavor. Typically deep-fried and lightly seasoned, these wings are served without any sauce, allowing the natural taste of the chicken to shine. Perfect for those who prefer a milder option, they're often paired with dipping sauces and fresh vegetable sticks for a satisfying snack or meal.",
           prices: [{ name: PriceNameType.STANDARD, price: 22.99 }],
           imageUrl:
             "https://images.unsplash.com/photo-1524114664604-cd8133cd67ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
           bestSeller: true,
         },
+
         {
           id: "4",
           name: "Tomato Soup",
@@ -150,11 +151,11 @@ export const dishes: TRestaurant = {
       items: [
         {
           id: "21",
-          name: "Beef Hamburger",
+          name: "Chicken Hamburger",
           ingredients:
-            "Ground beef, salt, pepper, buns, lettuche, tomato slices, onion, pickles, cheese, ktchup, mustard, mayonnaise, barbecue sauce",
+            "Ground chicken, salt, pepper, buns, lettuce, tomato slices, onion, pickles, cheese, ketchup, mustard, mayonnaise",
           description:
-            "Beef is a widely consumed and versatile meat obtained from cattle. It's renowned for its rich flavor and various cuts. It's a good source of high-quality protein, essential nutrients like iron and B-vitamins, and is often part of various cuisines worldwide. Beef remains a cornerstone in many diets and culinary traditions, offering a wide range of flavors and textures suitable for different dishes and cooking methods.",
+            "A chicken hamburger offers a lighter alternative to traditional beef burgers, made with ground chicken that's seasoned and grilled or pan-fried to perfection. Served on a soft bun with fresh toppings and condiments, it delivers a satisfying blend of savory flavors and juicy texture. It's a popular choice for those seeking a leaner, yet still delicious, burger option.",
           prices: [
             { name: PriceNameType.SINGLE, price: 10.99 },
             { name: PriceNameType.DOUBLE, price: 16.99 },
